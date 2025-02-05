@@ -1,0 +1,35 @@
+mode:
+  dev: true
+
+server:
+  port: 8090
+
+log:
+  MaxSize: 1      # 日志最大尺寸（M），超过后自动分割
+  MaxBackups: 10  # 保留旧文件的最大个数
+  MaxAge: 30      # 保留旧文件最大的天数
+
+db:
+  dsn: root:www.123##$.com@tcp(106.14.10.74:3306)/gin?charset=utf8&parseTime=True&loc=Local
+  MaxIdleConn: 10
+  MaxOpenConn: 10
+
+redis:
+  url: 106.14.10.74:16379
+
+
+jwt:
+  tokenExpire: 30
+  signingKey: gogofly.cn
+  sshExpire: 24 * 7
+
+selenium:
+  #  caseBreak: false
+  isHeadless: false  #  true启用浏览器无头模式
+  elementDefaultWaitTime: 3
+  winChromeDriverPath: D:/python3/chromedriver.exe
+  LinuxChromeDriverPath: /usr/local/bin/chromedriver
+#  LinuxChromeDriverPath: /usr/local/bin/geckodriver
+  maxChromeDriverPath: /usr/local/bin/chromedriver
+  port: 3414
+  base_url: http://localhost:8080
