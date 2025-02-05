@@ -1,2 +1,0 @@
-# autotestbackend
-这个是一个关于selenium自动化测试平台后端，使用golang
